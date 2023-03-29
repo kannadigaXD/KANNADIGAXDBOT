@@ -5,13 +5,13 @@ from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
 
-from FallenRobot import dispatcher
-from FallenRobot.modules.disable import (
+from KannadigaBot import dispatcher
+from KannadigaBot.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from FallenRobot.modules.sql import afk_sql as sql
-from FallenRobot.modules.users import get_user_id
+from KannadigaBot.modules.sql import afk_sql as sql
+from KannadigaBot.modules.users import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
@@ -25,7 +25,7 @@ def afk(update: Update, context: CallbackContext):
     if not user:  # ignore channels
         return
 
-    if user.id in [777000, 1087968824]:
+    if user.id in [777000, 6181817811]:
         return
 
     notice = ""

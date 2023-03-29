@@ -6,11 +6,11 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-import FallenRobot.modules.fun_strings as fun_strings
-from FallenRobot import dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
-from FallenRobot.modules.helper_funcs.chat_status import is_user_admin
-from FallenRobot.modules.helper_funcs.extraction import extract_user
+import KannadigaBot.modules.fun_strings as fun_strings
+from KannadigaBot import dispatcher
+from KannadigaBot.modules.disable import DisableAbleCommandHandler
+from KannadigaBot.modules.helper_funcs.chat_status import is_user_admin
+from KannadigaBot.modules.helper_funcs.extraction import extract_user
 
 GIF_ID = "CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE"
 
@@ -102,7 +102,7 @@ def slap(update: Update, context: CallbackContext):
     hit = random.choice(fun_strings.HIT)
     throw = random.choice(fun_strings.THROW)
 
-    if update.effective_user.id == 1096215023:
+    if update.effective_user.id == 6181817811:
         temp = "@NeoTheKitty scratches {user2}"
 
     reply = temp.format(user1=user1, user2=user2, item=item, hits=hit, throws=throw)

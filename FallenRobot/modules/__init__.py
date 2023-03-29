@@ -1,4 +1,4 @@
-from FallenRobot import LOAD, LOGGER, NO_LOAD
+from KannadigaBot import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():

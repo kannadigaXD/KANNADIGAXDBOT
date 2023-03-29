@@ -7,22 +7,22 @@ from telegram import ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-# from FallenRobot.modules.sql import warns_sql as warnssql
-import FallenRobot.modules.sql.blacklist_sql as blacklistsql
+# from KannadigaBot.modules.sql import warns_sql as warnssql
+import KannadigaBot.modules.sql.blacklist_sql as blacklistsql
 
-# from FallenRobot.modules.sql import cust_filters_sql as filtersql
-# import FallenRobot.modules.sql.welcome_sql as welcsql
-import FallenRobot.modules.sql.locks_sql as locksql
-import FallenRobot.modules.sql.notes_sql as sql
+# from KannadigaBot.modules.sql import cust_filters_sql as filtersql
+# import KannadigaBot.modules.sql.welcome_sql as welcsql
+import KannadigaBot.modules.sql.locks_sql as locksql
+import KannadigaBot.modules.sql.notes_sql as sql
 
-# from FallenRobot.modules.rules import get_rules
-import FallenRobot.modules.sql.rules_sql as rulessql
-from FallenRobot import EVENT_LOGS, LOGGER, OWNER_ID, SUPPORT_CHAT, dispatcher
-from FallenRobot.__main__ import DATA_IMPORT
-from FallenRobot.modules.connection import connected
-from FallenRobot.modules.helper_funcs.alternate import typing_action
-from FallenRobot.modules.helper_funcs.chat_status import user_admin
-from FallenRobot.modules.sql import disable_sql as disabledsql
+# from KannadigaBott.modules.rules import get_rules
+import KannadigaBot.modules.sql.rules_sql as rulessql
+from KannadigaBot import EVENT_LOGS, LOGGER, OWNER_ID, SUPPORT_CHAT, dispatcher
+from KannadigaBot.__main__ import DATA_IMPORT
+from KannadigaBot.modules.connection import connected
+from KannadigaBot.modules.helper_funcs.alternate import typing_action
+from KannadigaBot.modules.helper_funcs.chat_status import user_admin
+from KannadigaBot.modules.sql import disable_sql as disabledsql
 
 
 @run_async
@@ -341,7 +341,7 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("FallenRobot{}.backup".format(chat_id), "rb"),
+        document=open("KannadigaBot{}.backup".format(chat_id), "rb"),
         caption="📤*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `FallenRobot-Backup` was specially made for notes 📚.".format(
             chat.title, chat_id, tgl
         ),
@@ -349,7 +349,7 @@ def export_data(update, context):
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("FallenRobot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("KannadigaBot{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

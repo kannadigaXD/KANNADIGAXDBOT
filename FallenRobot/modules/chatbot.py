@@ -23,10 +23,10 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import FallenRobot.modules.sql.chatbot_sql as sql
-from FallenRobot import BOT_ID, BOT_NAME, BOT_USERNAME, dispatcher
-from FallenRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from FallenRobot.modules.log_channel import gloggable
+import KannadigaBot.modules.sql.chatbot_sql as sql
+from KannadigaBot import BOT_ID, BOT_NAME, BOT_USERNAME, dispatcher
+from KannadigaBot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from KannadigaBot.modules.log_channel import gloggable
 
 
 @run_async
@@ -110,7 +110,7 @@ def fallen(update: Update, context: CallbackContext):
 
 def fallen_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
-    if message.text.lower() == "fallen":
+    if message.text.lower() == "kannadiga":
         return True
     elif BOT_USERNAME in message.text.upper():
         return True
@@ -133,7 +133,7 @@ def chatbot(update: Update, context: CallbackContext):
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://kora-api.vercel.app/chatbot/2d94e37d-937f-4d28-9196-bd5552cac68b/{BOT_NAME}/Anonymous/message={message.text}"
+        url = f"https://kora-api.vercel.app/chatbot/2d94e37d-937f-4d28-9196-bd5552cac68b/{BOT_NAME}/kannadiga/message={message.text}"
         request = requests.get(url)
         results = json.loads(request.text)
         sleep(0.5)
@@ -149,7 +149,7 @@ __help__ = f"""
 __mod_name__ = "Cʜᴀᴛʙᴏᴛ"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", fallen)
+CHATBOTK_HANDLER = CommandHandler("chatbot", kannadiga)
 ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat")
 RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat")
 CHATBOT_HANDLER = MessageHandler(

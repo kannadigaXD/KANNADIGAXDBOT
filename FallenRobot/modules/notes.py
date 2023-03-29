@@ -20,13 +20,13 @@ from telegram.ext import (
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import escape_markdown, mention_markdown
 
-import FallenRobot.modules.sql.notes_sql as sql
-from FallenRobot import DRAGONS, EVENT_LOGS, LOGGER, SUPPORT_CHAT, dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
-from FallenRobot.modules.helper_funcs.chat_status import connection_status, user_admin
-from FallenRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from FallenRobot.modules.helper_funcs.msg_types import get_note_type
-from FallenRobot.modules.helper_funcs.string_handling import (
+import KannadigaBot.modules.sql.notes_sql as sql
+from KannadigaBot import DRAGONS, EVENT_LOGS, LOGGER, SUPPORT_CHAT, dispatcher
+from KannadigaBot.modules.disable import DisableAbleCommandHandler
+from KannadigaBot.modules.helper_funcs.chat_status import connection_status, user_admin
+from KannadigaBot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from KannadigaBot.modules.helper_funcs.msg_types import get_note_type
+from KannadigaBot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
 )
 

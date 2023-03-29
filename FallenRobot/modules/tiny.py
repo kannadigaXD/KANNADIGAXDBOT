@@ -3,8 +3,8 @@ import os
 import cv2
 from PIL import Image
 
-from FallenRobot import telethn as tbot
-from FallenRobot.events import register
+from KannadigaBot import telethn as tbot
+from KannadigaBot.events import register
 
 
 @register(pattern="^/tiny ?(.*)")

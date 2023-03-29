@@ -18,8 +18,8 @@ from telethon import events
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-import FallenRobot.modules.sql.userinfo_sql as sql
-from FallenRobot import (
+import KannadigaBot.modules.sql.userinfo_sql as sql
+from KannadigaBot import (
     DEMONS,
     DEV_USERS,
     DRAGONS,
@@ -29,14 +29,14 @@ from FallenRobot import (
     WOLVES,
     dispatcher,
 )
-from FallenRobot import telethn as FallenTelethonClient
-from FallenRobot.__main__ import STATS, TOKEN, USER_INFO
-from FallenRobot.modules.disable import DisableAbleCommandHandler
-from FallenRobot.modules.helper_funcs.chat_status import sudo_plus
-from FallenRobot.modules.helper_funcs.extraction import extract_user
-from FallenRobot.modules.sql.afk_sql import check_afk_status, is_afk
-from FallenRobot.modules.sql.global_bans_sql import is_user_gbanned
-from FallenRobot.modules.sql.users_sql import get_user_num_chats
+from KannadigaBot import telethn as FallenTelethonClient
+from KannadigaBot.__main__ import STATS, TOKEN, USER_INFO
+from KannadigaBot.modules.disable import DisableAbleCommandHandler
+from KannadigaBot.modules.helper_funcs.chat_status import sudo_plus
+from KannadigaBot.modules.helper_funcs.extraction import extract_user
+from KannadigaBot.modules.sql.afk_sql import check_afk_status, is_afk
+from KannadigaBot.modules.sql.global_bans_sql import is_user_gbanned
+from KannadigaBot.modules.sql.users_sql import get_user_num_chats
 
 
 def no_by_per(totalhp, percentage):
@@ -319,10 +319,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/FallenAssociation/7"
+                                "ʜᴇᴀʟᴛʜ", url="https://t.me/kannadiga_xd"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/FallenAssociation/8"
+                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/kannadiga_xd"
                             ),
                         ],
                     ]
@@ -377,21 +377,21 @@ def about_me(update: Update, context: CallbackContext):
 def set_about_me(update: Update, context: CallbackContext):
     message = update.effective_message
     user_id = message.from_user.id
-    if user_id in [777000, 1087968824]:
+    if user_id in [777000, 6181817811]:
         message.reply_text("Error! Unauthorized")
         return
     bot = context.bot
     if message.reply_to_message:
         repl_message = message.reply_to_message
         repl_user_id = repl_message.from_user.id
-        if repl_user_id in [bot.id, 777000, 1087968824] and (user_id in DEV_USERS):
+        if repl_user_id in [bot.id, 777000, 6181817811] and (user_id in DEV_USERS):
             user_id = repl_user_id
     text = message.text
     info = text.split(None, 1)
     if len(info) == 2:
         if len(info[1]) < MAX_MESSAGE_LENGTH // 4:
             sql.set_user_me_info(user_id, info[1])
-            if user_id in [777000, 1087968824]:
+            if user_id in [777000, 6181817811]:
                 message.reply_text("Authorized...Information updated!")
             elif user_id == bot.id:
                 message.reply_text("I have updated my info with the one you provided!")
@@ -459,13 +459,13 @@ def set_about_bio(update: Update, context: CallbackContext):
             )
             return
 
-        if user_id in [777000, 1087968824] and sender_id not in DEV_USERS:
+        if user_id in [777000, 6181817811] and sender_id not in DEV_USERS:
             message.reply_text("You are not authorised")
             return
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Umm... yeah, I only trust Anon Association to set my bio."
+                "Umm... yeah, I only trust Kannadiga Association to set my bio."
             )
             return
 

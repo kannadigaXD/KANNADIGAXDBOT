@@ -2,10 +2,10 @@ import asyncio
 
 from pyrogram import filters
 
-from FallenRobot import OWNER_ID, pbot
-from FallenRobot.utils.admins import can_change_info
-from FallenRobot.utils.errors import capture_err
-from FallenRobot.utils.mongo import (
+from KannadigaBot import OWNER_ID, pbot
+from KannadigaBot.utils.admins import can_change_info
+from KannadigaBot.utils.errors import capture_err
+from KannadigaBot.utils.mongo import (
     alpha_to_int,
     get_karma,
     get_karmas,

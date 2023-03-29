@@ -2,8 +2,8 @@ import requests
 from telegram import Update
 from telegram.ext import CallbackContext
 
-from FallenRobot import dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
+from KannadigaBot import dispatcher
+from KannadigaBot.modules.disable import DisableAbleCommandHandler
 
 
 def truth(update: Update, context: CallbackContext):

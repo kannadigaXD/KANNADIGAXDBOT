@@ -14,8 +14,8 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import FallenRobot.modules.sql.global_bans_sql as sql
-from FallenRobot import (
+import KannadigaBot.modules.sql.global_bans_sql as sql
+from KannadigaBot import (
     DEMONS,
     DEV_USERS,
     DRAGONS,
@@ -27,16 +27,16 @@ from FallenRobot import (
     WOLVES,
     dispatcher,
 )
-from FallenRobot.modules.helper_funcs.chat_status import (
+from KannadigaBot.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from FallenRobot.modules.helper_funcs.extraction import (
+from KannadigaBot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from FallenRobot.modules.helper_funcs.misc import send_to_list
+from KannadigaBot.modules.helper_funcs.misc import send_to_list
 from FallenRobot.modules.sql.users_sql import get_user_com_chats
 
 GBAN_ENFORCE_GROUP = 6
@@ -117,7 +117,7 @@ def gban(update: Update, context: CallbackContext):
         message.reply_text("You uhh...want me to punch myself?")
         return
 
-    if user_id in [777000, 1087968824]:
+    if user_id in [777000, 6181817811]:
         message.reply_text("Fool! You can't attack Telegram's native tech!")
         return
 
@@ -491,7 +491,7 @@ def __stats__():
 def __user_info__(user_id):
     is_gbanned = sql.is_user_gbanned(user_id)
     text = "Malicious: <b>{}</b>"
-    if user_id in [777000, 1087968824]:
+    if user_id in [777000, 6181817811]:
         return ""
     if user_id == dispatcher.bot.id:
         return ""

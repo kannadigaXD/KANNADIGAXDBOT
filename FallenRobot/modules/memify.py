@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 from KannadigaBot import telethn as bot
 from KannadigaBot.events import register
 
-Credit = "kannadigaXD5"
+Credit = "kannadigaXD"
 
 
 @register(pattern="^/mmf ?(.*)")

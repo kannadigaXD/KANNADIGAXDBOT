@@ -1,14 +1,14 @@
 ━━━━━━━━━━━━━━━━━━━━
 
 <h2 align="center">
-    ──「 ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ 」──
+    ──「 KANNADIGA BOT 」──
 </h2>
 
 <p align="center">
   <img src="https://github.com/kannadigaXD/KANNADIGAXDBOT/blob/master/KannadigaBot/resources/fglitch.gif">
 </p>
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ](https://t.me/FallenXRobot)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [KANNADIGA BOT](https://t.me/NAANKANNADIGA_BOT)**_
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">

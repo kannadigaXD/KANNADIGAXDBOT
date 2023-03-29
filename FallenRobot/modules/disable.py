@@ -12,9 +12,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown
 
-from FallenRobot import dispatcher
-from FallenRobot.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
-from FallenRobot.modules.helper_funcs.misc import is_module_loaded
+from KannadigaBot import dispatcher
+from KannadigaBot.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
+from KannadigaBot.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -27,7 +27,7 @@ if is_module_loaded(FILENAME):
         is_user_admin,
         user_admin,
     )
-    from FallenRobot.modules.sql import disable_sql as sql
+    from KannadigaBot.modules.sql import disable_sql as sql
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []
@@ -66,7 +66,7 @@ if is_module_loaded(FILENAME):
                             return None
                         chat = update.effective_chat
                         user = update.effective_user
-                        if user.id == 1087968824:
+                        if user.id == 6181817811:
                             user_id = chat.id
                         else:
                             user_id = user.id
@@ -159,7 +159,7 @@ if is_module_loaded(FILENAME):
         args = context.args
         chat = update.effective_chat
         if len(args) >= 1:
-            disable_module = "FallenRobot.modules." + args[0].rsplit(".", 1)[0]
+            disable_module = "KannadigaBot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(disable_module)
@@ -234,7 +234,7 @@ if is_module_loaded(FILENAME):
         chat = update.effective_chat
 
         if len(args) >= 1:
-            enable_module = "FallenRobot.modules." + args[0].rsplit(".", 1)[0]
+            enable_module = "KannadigaBot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(enable_module)

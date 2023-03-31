@@ -68,8 +68,8 @@ RUN pip3 install --upgrade pip setuptools
 RUN git clone https://github.com/kannadigaxd/KANNADIGXDBOT /root/KannadigaBot
 WORKDIR /root/KannadigaBot
 
-#Copy config file to /root/FallenRobot/FallenRobot
-COPY ./FallenRobot/config.py ./FallenRobot/config.py* /root/KannadigaBot/KannadigaBot/
+#Copy config file to /root/KannadigaBot/KannadigaBot
+COPY ./FallenRobot/config.py ./KannadigaBot/config.py* /root/KannadigaBot/KannadigaBot/
 
 ENV PATH="/home/bot/bin:$PATH"
 

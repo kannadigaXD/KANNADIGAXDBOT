@@ -142,13 +142,13 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1356469075)
+DEV_USERS.add(6181817811)
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Fallen", API_ID, API_HASH)
 
-pbot = Client("FallenRobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client("KannadigaBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 aiohttpsession = ClientSession()
 

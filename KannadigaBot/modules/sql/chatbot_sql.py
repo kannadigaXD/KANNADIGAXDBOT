@@ -17,7 +17,7 @@ KannadigaChats.__table__.create(checkfirst=True)
 INSERTION_LOCK = threading.RLock()
 
 
-def is_fallen(chat_id):
+def is_kannadiga(chat_id):
     try:
         chat = SESSION.query(KannadigaChats).get(str(chat_id))
         return bool(chat)

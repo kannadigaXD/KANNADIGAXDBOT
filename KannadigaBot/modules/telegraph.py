@@ -7,7 +7,7 @@ from telegraph import Telegraph, exceptions, upload_file
 from KannadigaBot import telethn as tbot
 from KannadigaBot.events import register
 
-Anonymous = "Fallen"
+Agora = "Kannadiga"
 TMP_DOWNLOAD_DIRECTORY = "./"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Anonymous)

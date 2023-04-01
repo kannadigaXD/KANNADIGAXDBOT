@@ -22,7 +22,7 @@ FILENAME = __name__.rsplit(".", 1)[-1]
 if is_module_loaded(FILENAME):
     from telegram.ext.dispatcher import run_async
 
-    from FallenRobot.modules.helper_funcs.chat_status import (
+    from KannadigaBot.modules.helper_funcs.chat_status import (
         connection_status,
         is_user_admin,
         user_admin,

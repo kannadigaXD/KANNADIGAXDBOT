@@ -29,7 +29,7 @@ from KannadigaBot import (
     WOLVES,
     dispatcher,
 )
-from KannadigaBot import telethn as FallenTelethonClient
+from KannadigaBot import telethn as KannadigaTelethonClient
 from KannadigaBot.__main__ import STATS, TOKEN, USER_INFO
 from KannadigaBot.modules.disable import DisableAbleCommandHandler
 from KannadigaBot.modules.helper_funcs.chat_status import sudo_plus
@@ -159,7 +159,7 @@ def get_id(update: Update, context: CallbackContext):
             )
 
 
-@FallenTelethonClient.on(
+@KannadigaTelethonClient.on(
     events.NewMessage(
         pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
     )

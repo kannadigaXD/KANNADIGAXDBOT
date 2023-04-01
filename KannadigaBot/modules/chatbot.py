@@ -39,9 +39,9 @@ def kannadigarm(update: Update, context: CallbackContext) -> str:
     if match:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
-        is_kannadiga = sql.set_fallen(chat.id)
+        is_kannadiga = sql.set_kannadiga(chat.id)
         if is_kannadiga:
-            is_kannadiga = sql.set_fallen(user_id)
+            is_kannadiga = sql.set_kannadiga(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"AI_DISABLED\n"

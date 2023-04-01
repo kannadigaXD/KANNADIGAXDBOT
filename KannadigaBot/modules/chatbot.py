@@ -90,7 +90,7 @@ def kannadigaadd(update: Update, context: CallbackContext) -> str:
 @run_async
 @user_admin
 @gloggable
-def fallen(update: Update, context: CallbackContext):
+def kannadiga(update: Update, context: CallbackContext):
     message = update.effective_message
     msg = "• ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ᴛᴏ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ"
     keyboard = InlineKeyboardMarkup(
@@ -125,7 +125,7 @@ def chatbot(update: Update, context: CallbackContext):
     message = update.effective_message
     chat_id = update.effective_chat.id
     bot = context.bot
-    is_kannadiga = sql.is_fallen(chat_id)
+    is_kannadiga = sql.is_kannadiga(chat_id)
     if is_kannadiga:
         return
 

@@ -62,7 +62,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [KANNADIGA BOT](http
 - Install requirements by :
 `pip3 install -U -r requirements.txt`
 - Fill your variables in config by :
-`vi FallenRobot/config.py`
+`vi KannadigaBot/config.py`
 
 Press `I` on the keyboard for editing config
 
@@ -70,7 +70,7 @@ Press `Ctrl+C` when you're done with editing config and `:wq` to save the config
 - Install tmux to keep running your bot when you close the terminal by :
 `sudo apt install tmux && tmux`
 - Finally run the bot by :
-`python3 -m FallenRobot`
+`python3 -m KannadigaBot`
 - For getting out from tmux session
 
 Press `Ctrl+b` and then `d`

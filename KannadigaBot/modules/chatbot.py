@@ -68,9 +68,9 @@ def kannadigaadd(update: Update, context: CallbackContext) -> str:
     if match:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
-        is_kannadiga = sql.rem_fallen(chat.id)
+        is_kannadiga = sql.rem_kannadiga(chat.id)
         if is_kannadiga:
-            is_fkannadiga = sql.rem_fallen(user_id)
+            is_fkannadiga = sql.rem_kannadiga(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"AI_ENABLE\n"

@@ -34,7 +34,7 @@ from KannadigaBot.modules.helper_funcs.chat_status import (
     user_admin,
     user_admin_no_reply,
 )
-from FallenRobot.modules.helper_funcs.extraction import (
+from KannadigaBot.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,

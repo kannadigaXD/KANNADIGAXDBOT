@@ -150,8 +150,8 @@ __mod_name__ = "Cʜᴀᴛʙᴏᴛ"
 
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", kannadiga)
-ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat")
-RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat")
+ADD_CHAT_HANDLER = CallbackQueryHandler(kannadigaadd, pattern=r"add_chat")
+RM_CHAT_HANDLER = CallbackQueryHandler(kannadigarm, pattern=r"rm_chat")
 CHATBOT_HANDLER = MessageHandler(
     Filters.text
     & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!") & ~Filters.regex(r"^\/")),

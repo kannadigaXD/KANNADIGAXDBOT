@@ -41,7 +41,7 @@ from KannadigaBot.modules.helper_funcs.extraction import (
 )
 from KannadigaBot.modules.helper_funcs.filters import CustomFilters
 from KannadigaBot.modules.helper_funcs.misc import split_message
-from FKannadigaBot.modules.helper_funcs.string_handling import split_quotes
+from KannadigaBot.modules.helper_funcs.string_handling import split_quotes
 from KannadigaBot.modules.log_channel import loggable
 from KannadigaBot.modules.sql import warns_sql as sql
 from KannadigaBot.modules.sql.approve_sql import is_approved

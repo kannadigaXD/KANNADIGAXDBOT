@@ -4,7 +4,7 @@ import pynewtonmath as newton
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
-from FKannadigaBot import dispatcher
+from KannadigaBot import dispatcher
 from KannadigaBot.modules.disable import DisableAbleCommandHandler
 
 

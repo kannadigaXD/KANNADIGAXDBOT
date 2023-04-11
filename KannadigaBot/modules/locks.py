@@ -10,8 +10,8 @@ from telegram.utils.helpers import mention_html
 import KannadigaBot.modules.sql.locks_sql as sql
 from KannadigaBot import DRAGONS, LOGGER, dispatcher
 from KannadigaBot.modules.connection import connected
-from FKannadigaBot.modules.disable import DisableAbleCommandHandler
-from FKannadigaBot.modules.helper_funcs.alternate import send_message, typing_action
+from KannadigaBot.modules.disable import DisableAbleCommandHandler
+from KannadigaBot.modules.helper_funcs.alternate import send_message, typing_action
 from KannadigaBot.modules.helper_funcs.chat_status import (
     can_delete,
     is_bot_admin,
